@@ -1,3 +1,5 @@
+import static java.lang.System.out;
+
 public class Main {
     public static void main(String[] args) {
         GTree gT = new GTree();
@@ -16,8 +18,9 @@ public class Main {
         Person vasya = new Person("Vasiliy", "Ivanov", Gender.MALE, mashanya, petya);
         gT.append(vasya);
 
-        System.out.println(new Relation(gT).childsOf(petya));
-        System.out.println(new Relation(gT).parentsOf(petya));
+        out.println(new Relation(gT).childsOf(petya));
+        out.println(new Relation(gT).parentsOf(petya));
+        out.println((new Relation(gT).parentsOf(ivan)));
 
         Implementator writer = new Implementator();
         writer.Savefile(gT.getGTree().toString());

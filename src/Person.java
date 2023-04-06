@@ -14,11 +14,7 @@ public class Person {
     }
 
     public Person(String name, String surname, Gender gender) {
-        this.name = name;
-        this.surname = surname;
-        this.gender = gender;
-        this.mother = null;
-        this.father = null;
+        this(name, surname, gender, null, null);
     }
 
     public String getName() {
@@ -63,10 +59,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return "{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
+        return "{" + name + " " + surname +
+                ", gender:" + gender +
                 '}';
     }
 }
